@@ -1,0 +1,18 @@
+﻿@model IEnumerable<MVCDemo.Models.tblEmployee>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Employees</h2>
+<table class="table table-bordered table-hover table-striped">
+    <tr><th>Employee Id</th>  <th>Name</th> <th>Gender</th> <th>City</th> <th>DepartmentId</th> <th>Details</th><th>Edit</th> <th>Delete</th></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.EmloyeeId</td> <td>@item.Name</td><td>@item.Gender</td>  <td>@item.City</td> <td>@item.DepartmentId</td>  <td><a href="/Employees/Search/@item.EmloyeeId">Details</a></td><td> <a href="/Employees/Edit/@item.EmloyeeId">Edit</a></td>  <td> <a href="/Employees/Delete/@item.EmloyeeId">Delete</a></td> </tr>
+
+    }
+
+</table>
+@Html.ActionLink("Create New Employee","Create","Employees")
+

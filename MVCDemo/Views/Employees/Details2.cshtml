@@ -1,0 +1,13 @@
+﻿@model IEnumerable<MVCDemo.Models.tblEmployee>
+@{
+    ViewBag.Title = "Details2";
+}
+
+<h2>Get Employee By Name</h2>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@Html.ActionLink(item.Name, "Search", new { @id = item.EmloyeeId })</li>
+    }
+</ul>
+

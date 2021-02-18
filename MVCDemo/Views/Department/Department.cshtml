@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MVCDemo.Models.tblDepartment>
+@{
+    ViewBag.Title = "Department";
+}
+
+<h2>Department</h2>
+<table class="table table-bordered table-striped table-striped table-hover">
+    <tr><th>Id</th> <th>Name</th></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.Id</td> <td>@item.Name</td></tr>
+    }
+
+
+ 
+</table>
+
